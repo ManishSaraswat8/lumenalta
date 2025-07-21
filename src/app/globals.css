@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom cursor styles */
+body {
+  cursor: none;
+}
+
+/* Custom cursor hover effects */
+[data-cursor-hover] {
+  cursor: none;
+}
+
+/* Dark mode transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+} 
