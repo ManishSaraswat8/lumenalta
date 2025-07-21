@@ -26,8 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6,
-        ease: 'easeOut',
+        duration: 0.6
       },
     },
   };
@@ -37,8 +36,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
       y: [0, -10, 0],
       transition: {
         duration: 3,
-        repeat: Infinity,
-        ease: 'easeInOut',
+        repeat: Infinity
       },
     },
   };
