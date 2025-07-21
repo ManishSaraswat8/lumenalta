@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
                   href={contact.href}
                   className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors duration-200 group"
                 >
-                  <contact.icon size={18} className="text-blue-400 group-hover:text-blue-300 sm:w-5 sm:h-5" />
+                  <contact.icon size={18} className="text-blue-400 group-hover:text-blue-300 sm:w-5 sm:h-5 flex-shrink-0" />
                   <div>
                     <div className="text-xs sm:text-sm text-gray-400">{contact.label}</div>
                     <div className="font-medium text-sm sm:text-base">{contact.value}</div>
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-200 group"
+                  className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-200 group min-h-[44px] min-w-[44px]"
                 >
                   <social.icon size={18} className="text-gray-400 group-hover:text-white sm:w-5 sm:h-5" />
                 </a>
@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-xs sm:text-sm"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 text-xs sm:text-sm block py-1"
                     >
                       {link.name}
                     </a>
@@ -167,7 +167,7 @@ const Footer: React.FC = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-xs sm:text-sm"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 text-xs sm:text-sm block py-1"
                     >
                       {link.name}
                     </a>
@@ -183,7 +183,7 @@ const Footer: React.FC = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-xs sm:text-sm"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 text-xs sm:text-sm block py-1"
                     >
                       {link.name}
                     </a>
@@ -199,7 +199,7 @@ const Footer: React.FC = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-xs sm:text-sm"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 text-xs sm:text-sm block py-1"
                     >
                       {link.name}
                     </a>
@@ -226,15 +226,15 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
+                className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base min-h-[44px]"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2 text-sm sm:text-base"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2 text-sm sm:text-base min-h-[44px] whitespace-nowrap"
               >
                 Subscribe
-                <ArrowRight size={16} />
+                <ArrowRight size={16} className="flex-shrink-0" />
               </motion.button>
             </div>
           </div>
@@ -249,18 +249,18 @@ const Footer: React.FC = () => {
               © {currentYear} Lumenalta. All rights reserved.
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-400">
-              <a href="/privacy" className="hover:text-white transition-colors duration-200">
+              <a href="/privacy" className="hover:text-white transition-colors duration-200 py-1">
                 Privacy Policy
               </a>
-              <a href="/terms" className="hover:text-white transition-colors duration-200">
+              <a href="/terms" className="hover:text-white transition-colors duration-200 py-1">
                 Terms of Service
               </a>
-              <a href="/cookies" className="hover:text-white transition-colors duration-200">
+              <a href="/cookies" className="hover:text-white transition-colors duration-200 py-1">
                 Cookie Policy
               </a>
             </div>
             <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
-              Made with <Heart size={14} className="text-red-500 sm:w-4 sm:h-4" /> by Lumenalta
+              Made with <Heart size={14} className="text-red-500 sm:w-4 sm:h-4 flex-shrink-0" /> by Lumenalta
             </div>
           </div>
         </div>

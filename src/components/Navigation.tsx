@@ -39,7 +39,7 @@ const Navigation: React.FC<NavigationProps> = ({ isDarkMode, toggleDarkMode }) =
             whileHover={{ scale: 1.05 }}
             className="flex-shrink-0"
           >
-            <Link href="/">
+            <Link href="/" className="flex items-center">
               <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white cursor-pointer transition-colors duration-300" data-cursor-hover>
                 Lumenalta
               </h1>
@@ -76,7 +76,7 @@ const Navigation: React.FC<NavigationProps> = ({ isDarkMode, toggleDarkMode }) =
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 dark:bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+              className="bg-blue-600 dark:bg-blue-500 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200 min-h-[44px] flex items-center justify-center"
               data-cursor-hover
             >
               Get Started
@@ -84,17 +84,17 @@ const Navigation: React.FC<NavigationProps> = ({ isDarkMode, toggleDarkMode }) =
           </div>
 
           {/* Mobile Theme Toggle - Always Visible */}
-          <div className="lg:hidden flex items-center gap-3">
+          <div className="lg:hidden flex items-center gap-2">
             <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
             
             {/* Mobile menu button */}
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2 transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2.5 transition-colors duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
               data-cursor-hover
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </motion.button>
           </div>
         </div>
@@ -107,12 +107,12 @@ const Navigation: React.FC<NavigationProps> = ({ isDarkMode, toggleDarkMode }) =
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition-colors duration-300"
           >
-            <div className="px-2 pt-2 pb-3 space-y-2">
+            <div className="px-3 pt-3 pb-4 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-3 py-3 text-base font-medium transition-colors duration-200 rounded-lg ${
+                  className={`block px-4 py-3 text-base font-medium transition-colors duration-200 rounded-lg min-h-[44px] flex items-center ${
                     pathname === item.href
                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
                       : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
@@ -125,7 +125,7 @@ const Navigation: React.FC<NavigationProps> = ({ isDarkMode, toggleDarkMode }) =
               ))}
               <div className="pt-2">
                 <button
-                  className="w-full text-left bg-blue-600 dark:bg-blue-500 text-white px-3 py-3 rounded-lg text-base font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
+                  className="w-full bg-blue-600 dark:bg-blue-500 text-white px-4 py-3 rounded-lg text-base font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200 min-h-[44px] flex items-center justify-center"
                   data-cursor-hover
                 >
                   Get Started

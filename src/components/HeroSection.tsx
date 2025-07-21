@@ -87,7 +87,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors duration-300"
               >
-                <Zap size={14} className="sm:w-4 sm:h-4" />
+                <Zap size={14} className="sm:w-4 sm:h-4 flex-shrink-0" />
                 <span className="hidden sm:inline">Transforming Digital Experiences</span>
                 <span className="sm:hidden">Digital Transformation</span>
               </motion.div>
@@ -112,24 +112,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)' }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 dark:bg-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-200 flex items-center justify-center gap-2 group"
+                className="bg-blue-600 dark:bg-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-200 flex items-center justify-center gap-2 group min-h-[44px]"
                 data-cursor-hover
               >
                 <span className="hidden sm:inline">Start Your Transformation</span>
                 <span className="sm:hidden">Get Started</span>
                 <ArrowRight 
                   size={18} 
-                  className="sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-200" 
+                  className="sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0" 
                 />
               </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center justify-center gap-2"
+                className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center justify-center gap-2 min-h-[44px]"
                 data-cursor-hover
               >
-                <Play size={18} className="sm:w-5 sm:h-5" />
+                <Play size={18} className="sm:w-5 sm:h-5 flex-shrink-0" />
                 <span className="hidden sm:inline">Watch Demo</span>
                 <span className="sm:hidden">Demo</span>
               </motion.button>
@@ -140,11 +140,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
               className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 pt-4 sm:pt-8"
             >
               <div className="flex items-center gap-2">
-                <Shield className="text-green-500 w-4 h-4 sm:w-5 sm:h-5" />
+                <Shield className="text-green-500 w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                 <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">Enterprise Security</span>
               </div>
               <div className="flex items-center gap-2">
-                <Users className="text-blue-500 w-4 h-4 sm:w-5 sm:h-5" />
+                <Users className="text-blue-500 w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                 <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">500+ Clients</span>
               </div>
             </motion.div>
@@ -166,7 +166,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
               >
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center transition-colors duration-300 flex-shrink-0">
                       <Zap className="text-blue-600 dark:text-blue-400" size={24} />
                     </div>
                     <div>

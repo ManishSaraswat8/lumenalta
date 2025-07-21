@@ -78,7 +78,7 @@ const Home: React.FC = () => {
                 viewport={{ once: true }}
                 className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <service.icon className="text-blue-600 dark:text-blue-400 w-6 h-6 sm:w-8 sm:h-8" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 transition-colors duration-300">
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                      <CheckCircle className="text-green-500 w-4 h-4" />
+                      <CheckCircle className="text-green-500 w-4 h-4 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -263,21 +263,21 @@ const Home: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-100 transition-all duration-200 flex items-center justify-center gap-2 group"
+                className="bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-100 transition-all duration-200 flex items-center justify-center gap-2 group min-h-[44px]"
               >
                 <span className="hidden sm:inline">Get Started Today</span>
                 <span className="sm:hidden">Get Started</span>
                 <ArrowRight 
                   size={18} 
-                  className="sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-200" 
+                  className="sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0" 
                 />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-white hover:text-blue-600 transition-all duration-200 flex items-center justify-center gap-2"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-white hover:text-blue-600 transition-all duration-200 flex items-center justify-center gap-2 min-h-[44px]"
               >
-                <Phone size={18} className="sm:w-5 sm:h-5" />
+                <Phone size={18} className="sm:w-5 sm:h-5 flex-shrink-0" />
                 <span className="hidden sm:inline">Schedule a Call</span>
                 <span className="sm:hidden">Call Us</span>
               </motion.button>
@@ -354,7 +354,7 @@ const Home: React.FC = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm sm:text-base transition-colors duration-300"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm sm:text-base transition-colors duration-300 min-h-[44px]"
                       placeholder="John"
                     />
                   </div>
@@ -364,7 +364,7 @@ const Home: React.FC = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm sm:text-base transition-colors duration-300"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm sm:text-base transition-colors duration-300 min-h-[44px]"
                       placeholder="Doe"
                     />
                   </div>
@@ -375,7 +375,7 @@ const Home: React.FC = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm sm:text-base transition-colors duration-300"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm sm:text-base transition-colors duration-300 min-h-[44px]"
                     placeholder="john@company.com"
                   />
                 </div>
@@ -385,14 +385,14 @@ const Home: React.FC = () => {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm sm:text-base transition-colors duration-300"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm sm:text-base transition-colors duration-300"
                     placeholder="Tell us about your project..."
                   ></textarea>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-blue-600 dark:bg-blue-500 text-white py-2 sm:py-3 rounded-lg font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200 text-sm sm:text-base"
+                  className="w-full bg-blue-600 dark:bg-blue-500 text-white py-2.5 sm:py-3 rounded-lg font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200 text-sm sm:text-base min-h-[44px] flex items-center justify-center"
                 >
                   Send Message
                 </motion.button>
