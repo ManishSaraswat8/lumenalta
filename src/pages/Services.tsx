@@ -66,9 +66,8 @@ const Services: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
+            transition: {
+        duration: 0.6
       },
     },
   };
@@ -176,7 +175,7 @@ const Services: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100">
-              Let's discuss how our services can help you achieve your digital transformation goals.
+              Let&apos;s discuss how our services can help you achieve your digital transformation goals.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

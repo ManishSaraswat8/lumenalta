@@ -84,9 +84,8 @@ const Contact: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
+            transition: {
+        duration: 0.6
       },
     },
   };
@@ -106,7 +105,7 @@ const Contact: React.FC = () => {
               Get In <span className="bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent">Touch</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Ready to transform your business? Let's start a conversation about how we can help 
+              Ready to transform your business? Let&apos;s start a conversation about how we can help 
               you achieve your digital transformation goals.
             </p>
           </motion.div>

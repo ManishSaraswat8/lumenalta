@@ -72,9 +72,8 @@ const Solutions: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
+            transition: {
+        duration: 0.6
       },
     },
   };
@@ -201,7 +200,7 @@ const Solutions: React.FC = () => {
               Need a Custom Solution?
             </h2>
             <p className="text-xl text-indigo-100">
-              We create bespoke solutions tailored to your industry's unique challenges and requirements.
+              We create bespoke solutions tailored to your industry&apos;s unique challenges and requirements.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

@@ -79,8 +79,7 @@ const About: React.FC = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6,
-        ease: 'easeOut',
+        duration: 0.6
       },
     },
   };
@@ -100,7 +99,7 @@ const About: React.FC = () => {
               About <span className="bg-gradient-to-r from-green-600 to-blue-600 dark:from-green-400 dark:to-blue-400 bg-clip-text text-transparent">Lumenalta</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              We're a team of passionate technologists, designers, and strategists 
+              We&apos;re a team of passionate technologists, designers, and strategists 
               dedicated to transforming businesses through innovative digital solutions.
             </p>
           </motion.div>
@@ -129,9 +128,9 @@ const About: React.FC = () => {
                 change, enabling businesses to reach their full potential.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                Since our founding, we've been committed to delivering exceptional results through 
+                Since our founding, we&apos;ve been committed to delivering exceptional results through 
                 a combination of technical expertise, creative thinking, and unwavering dedication 
-                to our clients' success.
+                to our clients&apos; success.
               </p>
             </motion.div>
 
@@ -280,7 +279,7 @@ const About: React.FC = () => {
               Ready to Work Together?
             </h2>
             <p className="text-xl text-green-100">
-              Let's discuss how we can help transform your business with innovative technology solutions.
+              Let&apos;s discuss how we can help transform your business with innovative technology solutions.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

@@ -105,9 +105,8 @@ const Careers: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
+            transition: {
+        duration: 0.6
       },
     },
   };
@@ -155,8 +154,8 @@ const Careers: React.FC = () => {
                 Our culture is built on collaboration, innovation, and mutual respect.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                We're not just colleagues – we're a community of passionate individuals who support 
-                each other's growth and celebrate each other's successes.
+                We&apos;re not just colleagues – we&apos;re a community of passionate individuals who support 
+                each other&apos;s growth and celebrate each other&apos;s successes.
               </p>
               <div className="flex items-center gap-8 pt-4">
                 <div className="text-center">
@@ -324,10 +323,10 @@ const Careers: React.FC = () => {
             className="space-y-6"
           >
             <h2 className="text-4xl font-bold text-white">
-              Don't See the Right Role?
+              Don&apos;t See the Right Role?
             </h2>
             <p className="text-xl text-orange-100">
-              We're always looking for talented individuals. Send us your resume and let's talk about future opportunities.
+              We&apos;re always looking for talented individuals. Send us your resume and let&apos;s talk about future opportunities.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

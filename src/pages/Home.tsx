@@ -189,7 +189,7 @@ const Home: React.FC = () => {
               What Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">Clients Say</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
-              Don't just take our word for it - hear from the companies we've helped transform
+              Don&apos;t just take our word for it - hear from the companies we&apos;ve helped transform
             </p>
           </motion.div>
 
@@ -228,7 +228,7 @@ const Home: React.FC = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 italic transition-colors duration-300">
-                  "{testimonial.content}"
+                  &ldquo;{testimonial.content}&rdquo;
                 </p>
                 <div>
                   <div className="font-semibold text-gray-900 dark:text-white transition-colors duration-300">
@@ -257,7 +257,7 @@ const Home: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve your digital transformation goals
+              Let&apos;s discuss how we can help you achieve your digital transformation goals
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -295,7 +295,7 @@ const Home: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
-                Let's <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">Connect</span>
+                Let&apos;s <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">Connect</span>
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 transition-colors duration-300">
                 Ready to start your digital transformation journey? Get in touch with our team.
