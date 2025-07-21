@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Building2, ShoppingCart, Heart, GraduationCap, Car, Banknote, ArrowRight, TrendingUp, Users, Shield } from 'lucide-react';
+import Image from 'next/image';
 
 const Solutions: React.FC = () => {
   const solutions = [
@@ -141,9 +142,11 @@ const Solutions: React.FC = () => {
                 data-cursor-hover
               >
                 <div className="aspect-video overflow-hidden">
-                  <img 
+                  <Image 
                     src={solution.image} 
                     alt={solution.title}
+                    width={800}
+                    height={450}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, MapPin, Clock, ArrowRight, Heart, Users, Zap, Award, Coffee, Laptop, Plane, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
 
 const Careers: React.FC = () => {
   const benefits = [
@@ -175,9 +176,11 @@ const Careers: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <img 
+              <Image 
                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" 
                 alt="Team working together"
+                width={800}
+                height={600}
                 className="rounded-2xl shadow-2xl dark:shadow-gray-900/50"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>

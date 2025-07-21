@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, ShoppingBag, Heart, GraduationCap, Plane, Factory, ArrowRight, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const Industries: React.FC = () => {
   const industries = [
@@ -197,9 +198,11 @@ const Industries: React.FC = () => {
                   className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}
                 >
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl dark:shadow-gray-900/50">
-                    <img 
+                    <Image 
                       src={industry.image} 
                       alt={industry.title}
+                      width={800}
+                      height={400}
                       className="w-full h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

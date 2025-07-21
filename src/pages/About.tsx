@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Globe, ArrowRight, Heart, Lightbulb, Shield } from 'lucide-react';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   const values = [
@@ -246,9 +247,11 @@ const About: React.FC = () => {
                 className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mx-auto mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300">
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
+                    width={96}
+                    height={96}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -280,7 +283,7 @@ const About: React.FC = () => {
               Ready to Work Together?
             </h2>
             <p className="text-lg sm:text-xl text-green-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help transform your business with innovative digital solutions.
+              Let&apos;s discuss how we can help transform your business with innovative digital solutions.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
