@@ -15,19 +15,19 @@ const DarkModeToggle: React.FC<DarkModeToggleProps> = ({ isDarkMode, toggleDarkM
       onClick={toggleDarkMode}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative w-14 h-8 bg-gray-300 dark:bg-gray-600 rounded-full p-1 transition-colors duration-300"
+      className="relative w-12 h-7 sm:w-14 sm:h-8 bg-gray-300 dark:bg-gray-600 rounded-full p-1 transition-colors duration-300"
       data-cursor-hover
     >
       <motion.div
         animate={{
-          x: isDarkMode ? 24 : 0,
+          x: isDarkMode ? (window.innerWidth < 640 ? 20 : 24) : 0,
         }}
         transition={{
           type: 'spring',
           stiffness: 500,
           damping: 30,
         }}
-        className="w-6 h-6 bg-white dark:bg-gray-800 rounded-full shadow-md flex items-center justify-center"
+        className="w-5 h-5 sm:w-6 sm:h-6 bg-white dark:bg-gray-800 rounded-full shadow-md flex items-center justify-center"
       >
         <motion.div
           animate={{
@@ -37,9 +37,9 @@ const DarkModeToggle: React.FC<DarkModeToggleProps> = ({ isDarkMode, toggleDarkM
           transition={{ duration: 0.3 }}
         >
           {isDarkMode ? (
-            <Moon size={14} className="text-blue-400" />
+            <Moon size={12} className="text-blue-400 sm:w-3.5 sm:h-3.5" />
           ) : (
-            <Sun size={14} className="text-yellow-500" />
+            <Sun size={12} className="text-yellow-500 sm:w-3.5 sm:h-3.5" />
           )}
         </motion.div>
       </motion.div>

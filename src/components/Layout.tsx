@@ -3,6 +3,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import CustomCursor from './CustomCursor';
+import Footer from './Footer';
 import { useDarkMode } from '../hooks/useDarkMode';
 
 interface LayoutProps {
@@ -19,6 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="pt-16">
         {children}
       </main>
+      <Footer />
     </div>
   );
 };
