@@ -119,58 +119,123 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Discovery",
-                description: "We analyze your requirements and create a comprehensive project roadmap",
-                icon: Target
-              },
-              {
-                step: "02",
-                title: "Design",
-                description: "Our design team creates intuitive interfaces and user experiences",
-                icon: Monitor
-              },
-              {
-                step: "03",
-                title: "Development",
-                description: "Agile development process with regular updates and feedback loops",
-                icon: Code
-              },
-              {
-                step: "04",
-                title: "Deploy",
-                description: "Thorough testing and seamless deployment to production",
-                icon: Rocket
-              }
-            ].map((process, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center relative"
-              >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <process.icon className="text-white w-6 h-6 sm:w-8 sm:h-8" />
-                </div>
-                <div className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-3 sm:mb-4 transition-colors duration-300">
-                  {process.step}
-                </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 transition-colors duration-300">
-                  {process.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                  {process.description}
-                </p>
-                {index < 3 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-blue-200 dark:bg-blue-800 transform translate-x-4"></div>
-                )}
-              </motion.div>
-            ))}
+          {/* Desktop Layout with Connecting Lines */}
+          <div className="hidden lg:block relative">
+            {/* Main connecting line that spans across all steps */}
+            <div className="absolute top-10 left-0 right-0 h-0.5 bg-blue-300 dark:bg-blue-600 z-0"></div>
+            
+            <div className="grid grid-cols-4 gap-8 relative z-10">
+              {[
+                {
+                  step: "01",
+                  title: "Discovery",
+                  description: "We analyze your requirements and create a comprehensive project roadmap",
+                  icon: Target
+                },
+                {
+                  step: "02",
+                  title: "Design",
+                  description: "Our design team creates intuitive interfaces and user experiences",
+                  icon: Monitor
+                },
+                {
+                  step: "03",
+                  title: "Development",
+                  description: "Agile development process with regular updates and feedback loops",
+                  icon: Code
+                },
+                {
+                  step: "04",
+                  title: "Deploy",
+                  description: "Thorough testing and seamless deployment to production",
+                  icon: Rocket
+                }
+              ].map((process, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center relative"
+                >
+                  <div className="w-20 h-20 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white dark:border-gray-800 shadow-lg relative z-10">
+                    <process.icon className="text-white w-8 h-8" />
+                  </div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-4 transition-colors duration-300">
+                    {process.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
+                    {process.title}
+                  </h3>
+                  <p className="text-base text-gray-600 dark:text-gray-300 transition-colors duration-300 leading-relaxed">
+                    {process.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile/Tablet Layout */}
+          <div className="lg:hidden">
+            <div className="space-y-6">
+              {[
+                {
+                  step: "01",
+                  title: "Discovery",
+                  description: "We analyze your requirements and create a comprehensive project roadmap",
+                  icon: Target
+                },
+                {
+                  step: "02",
+                  title: "Design",
+                  description: "Our design team creates intuitive interfaces and user experiences",
+                  icon: Monitor
+                },
+                {
+                  step: "03",
+                  title: "Development",
+                  description: "Agile development process with regular updates and feedback loops",
+                  icon: Code
+                },
+                {
+                  step: "04",
+                  title: "Deploy",
+                  description: "Thorough testing and seamless deployment to production",
+                  icon: Rocket
+                }
+              ].map((process, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center border-2 border-white dark:border-gray-700 shadow-md">
+                        <process.icon className="text-white w-6 h-6" />
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                          {process.step}
+                        </span>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                          {process.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        {process.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
