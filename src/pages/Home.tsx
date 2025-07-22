@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import HeroSection from '../components/HeroSection';
+import SlidingTextVideoHero from '../components/SlidingTextVideoHero';
 import { useDarkMode } from '../hooks/useDarkMode';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Zap, Shield, Users, Star, Globe, Rocket, Target, Award, CheckCircle, ArrowDown, Code, Database, Cloud, Smartphone, Monitor, Server, Lock, TrendingUp, Clock, Headphones, Mail, Phone, MapPin } from 'lucide-react';
@@ -11,7 +11,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="-mt-16">
-      <HeroSection isDarkMode={isDarkMode} />
+      <SlidingTextVideoHero isDarkMode={isDarkMode} />
       
       {/* Services Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900 transition-colors duration-500">
